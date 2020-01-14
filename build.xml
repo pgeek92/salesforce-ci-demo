@@ -1,0 +1,22 @@
+<project name="Sample usage of Salesforce Ant tasks" default="test" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <property file="build.properties"/>
+    <property environment="env"/>
+
+    <target name = "retrieve">
+		<mkdir dir = "src"/>
+		<sf:retrieve username = "${sf.SRC_USERNAME}" password = "${sf.SRC_PASSWD}" serverurl = "${sf.SRC_URL}"
+		retrieveTarget = "src" packageNames = "Geolocation Field Deploy"/>
+	</target>
+	
+	<target name = "deployValidate">
+		<sf:deploy username = "${sf.DEST_USERNAME}" password = "${sf.DEST_PASSWD}" serverurl = "${sf.DEST_URL}"
+		deployRoot = "src" rollbackOnError = "true" checkOnly = "true"/>
+	</target>
+	
+	<target name = "deploy">
+		<sf:deploy username = "${sf.DEST_USERNAME}" password = "${sf.DEST_PASSWD}" serverurl = "${sf.DEST_URL}"
+		deployRoot = "src" rollbackOnError = "true"/>
+	</target>
+	
+</project>
