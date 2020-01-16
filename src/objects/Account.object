@@ -10,4 +10,14 @@
         <trackFeedHistory>false</trackFeedHistory>
         <type>Location</type>
     </fields>
+	<fields>
+        <fullName>Geolocation1__c</fullName>
+        <displayLocationInDecimal>true</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <label>Geolocation1</label>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Location</type>
+    </fields>
 </CustomObject>
