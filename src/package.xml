@@ -3,12 +3,8 @@
     <fullName>Geolocation Field Deploy</fullName>
     <description>Deploy Geolocation field with System Administrator profile and Account Layout</description>
     <types>
-        <members>Account.Geolocation__c</members>
+        <members>Account.Geolocation1__c</members>
         <name>CustomField</name>
-    </types>
-    <types>
-        <members>Account-Account Layout</members>
-        <name>Layout</name>
     </types>
     <version>47.0</version>
 </Package>
